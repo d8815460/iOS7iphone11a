@@ -13,4 +13,52 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <Parse/Parse.h>
+#import "OmniCache.h"
+#import "OmniTool.h"
+#import "OmniVar.h"
+#import "PAPUtility.h"
+#import "PAPCache.h"
+#import "PAPConstants.h"
+#import "MinnaNotificationProtocol.h"
+#import "MinnaOpenGraphRequest.h"
+#import "MinnaMessageView.h"
+
+//#ifndef VIEWCONTROLLER_H_
+#define VIEWCONTROLLER_H_
+
+#define BTN_TARE		0
+#define BTN_BATTERY		1
+#define BTN_DISCNT		2
+#define BTN_MENU		3
+#define BTN_MENU_CLOSE	4
+#define BTN_HELP		5
+#define BTN_ABOUT		6
+#define BTN_HAVESCALE	7
+#define BTN_HAVENOSCALE	8
+#define BTN_BACK		9
+#define BTN_SCALEBACK	10
+#define BTN_GOMAIN		11
+#define BTN_RECONNECT	12
+#define BTN_CANCEL_CNT	13
+#define SWIP_UNIT		14
+#define BTN_BUY			15
+#define BTN_LOGO			16
+
+#define WEIGHT_NET	0
+#define WEIGHT_ZERO	1
+#define UNIT_NONE	0		// •º±o®ÏØØ∫›§ß´esourceunit™∫≠»
+#define UNIT_G		1
+#define UNIT_LB		2
+#define UNIT_OZ		3
+#define UNIT_CATTY	4
+#define UNIT_TAEL	5
+#define UNIT_CHIAN	6
+
+#define LOW_BATTERY 20
+
+#define DEGREES_TO_RADIANS(x) (M_PI * ( x ) / 180.0)
+
 #endif
