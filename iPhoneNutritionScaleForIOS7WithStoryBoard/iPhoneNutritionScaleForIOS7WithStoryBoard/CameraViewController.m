@@ -235,7 +235,14 @@ NSString* kIrisViewClassName = @"PLCameraIrisAnimationView";
         [self initWaterScrollAndCarbsRda:carbsRda AndSaltRda:saltRda AndFatRda:fatRda];
     }
     
-    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSString *isFirstSetup = [userDefaults objectForKey:@"isFirstSetup"];
+    NSLog(@"is first setup = %@", isFirstSetup);
+    if ([isFirstSetup isEqualToString:@"YES"] || !isFirstSetup) {
+        [self teachBtnAction:nil];
+        [userDefaults setObject:@"NO" forKey:@"isFirstSetup"];
+        [userDefaults synchronize];
+    }
     
     _takePhotoButton.userInteractionEnabled = YES;
     _albumButton.userInteractionEnabled = YES;
